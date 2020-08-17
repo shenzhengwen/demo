@@ -4,19 +4,10 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/demo")
 public class HelloController {
 
-
-    @GetMapping(value = "/say")
-    @ResponseBody
-    public String hello() {
-        try {
-
-        } catch (Exception e) {
-        }
-        return "hello" ;
+    @RequestMapping("/hello")
+    public String index(@RequestParam String name) {
+        return "hello "+name+"，this is first messge";
     }
-
-
 }
