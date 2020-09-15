@@ -34,6 +34,7 @@ public class DynamicScheduleTask implements SchedulingConfigurer {
                     Cron cron = cronServiceImpl.getCronInfo("1");
                     //2.2 合法性校验.
                     if (StringUtils.isEmpty(cron.getCron())) {
+                        ///
                         // Omitted Code ..
                     }
                     //2.3 返回执行周期(Date)
