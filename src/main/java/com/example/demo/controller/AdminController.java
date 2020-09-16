@@ -22,9 +22,7 @@ public class AdminController {
     @ApiOperation("查询用户")
     public Admin getAdminInfo(@RequestParam(value = "aid") int aid)
     {
-        log.info("调用----热部署cg请求1");
-        log.info("调用----热部署cg请求2");
-        log.info("调用----热部署cg请求3");
+        log.info("调用----根据用户id查询");
         return adminServiceImpl.getAdminInfo(aid);
 
     }

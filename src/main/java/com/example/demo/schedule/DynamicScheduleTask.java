@@ -2,13 +2,13 @@ package com.example.demo.schedule;
 
 import com.example.demo.entity.Cron;
 import com.example.demo.service.CronServiceImpl;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
-import org.thymeleaf.util.StringUtils;
 
 import java.time.LocalDateTime;
 
