@@ -105,7 +105,7 @@
 
     <logger name="org.spring" additivity="true" level="ERROR"/>
 
-    <logger name="com.citict.project" level="INFO" />
+    <logger name="com.example.demo" level="INFO" />
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>

@@ -2,18 +2,16 @@
 <config>
     <group>
         <!--服务相关配置-->
-        <property name="spring.application.name" defaultValue="empty-demo" description="demo"/>
-        <property name="server.servlet.context-path" defaultValue="/" description="demo"/>
-        <property name="server.port" defaultValue="80" description="web项目端口号"/>
+        <property name="spring.application.name" defaultValue="demo" description="demo"/>
+        <property name="server.servlet.context-path" defaultValue="/demo" description="demo"/>
+        <property name="server.port" defaultValue="8080" description="web项目端口号"/>
 
         <!--eureka-->
         <property name="eureka.client.register-with-eureka" defaultValue="false" description=""/>
         <property name="eureka.client.fetch-registry" defaultValue="false" description=""/>
 
-
         <!--数据源-->
         <property name="spring.datasource.type" defaultValue="com.alibaba.druid.pool.DruidDataSource" description="数据库连接池类型"/>
-
         <property name="spring.datasource.url"
                   defaultValue="jdbc:mysql://192.168.43.143:3306/dome?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT%2B8"
                   description="数据库连接地址"/>
@@ -25,30 +23,25 @@
         <property name="mybatis.mapper-locations" defaultValue="classpath:mapper/*.xml" description=""/>
         <property name="mybatis.type-aliases-package" defaultValue="com.citict.project.entity" description=""/>
 
-        <property name="spring.datasource.druid.filter.stat.log-slow-sql"
-                  defaultValue="true" description="慢查询过滤器是否开启"/>
-        <property name="spring.datasource.druid.filter.stat.slow-sql-millis"
-                  defaultValue="2000" description="慢查询过滤阈值设置"/>
-        <property name="spring.datasource.druid.stat-view-servlet.login-username"
-                  defaultValue="admin" description="用户名"/>
-        <property name="spring.datasource.druid.stat-view-servlet.login-password"
-                  defaultValue="admin" description="密码"/>
+        <property name="spring.datasource.druid.filter.stat.log-slow-sql" defaultValue="true" description="慢查询过滤器是否开启"/>
+        <property name="spring.datasource.druid.filter.stat.slow-sql-millis" defaultValue="2000" description="慢查询过滤阈值设置"/>
+        <property name="spring.datasource.druid.stat-view-servlet.login-username"  defaultValue="admin" description="用户名"/>
+        <property name="spring.datasource.druid.stat-view-servlet.login-password" defaultValue="admin" description="密码"/>
         <property name="spring.datasource.druid.initial-size" defaultValue="3" description="数据库连接池初始化大小"/>
         <property name="spring.datasource.druid.min-idle" defaultValue="3" description="数据库连接池最小连接数"/>
         <property name="spring.datasource.druid.max-active" defaultValue="10" description="数据库连接池最大连接数"/>
 
-        <property name="logging.pattern.console"
-                  defaultValue="%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%5p) %clr([%15.15t]){cyan} %clr(%X{__traceId}){magenta} %clr(%-40.40logger{39}){blue} %clr(:) %m%n"
-                  description="日志"/>
-        <property name="logging.pattern.file" defaultValue="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%t] %X{__traceId} %-40.40logger{39} : %m%n" description="日志"/>
+        <!--日志-->
+        <property name="logging.pattern.console" defaultValue="%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%5p) %clr([%15.15t]){cyan} %clr(%X{__traceId}){magenta} %clr(%-40.40logger{39}){blue} %clr(:) %m%n" description="日志"/>
+        <property name="logging.pattern.file.name" defaultValue="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%t] %X{__traceId} %-40.40logger{39} : %m%n" description="日志"/>
         <property name="logging.level.com.example.demo" defaultValue="debug" description="日志"/>
         <property name="logging.file.name" defaultValue="/home/app/logs/sql.log" description="日志文件"/>
         <property name="file.max-hitory" defaultValue="30" description="日志保留日期"/>
 
+        <!--邮件-->
         <property name="spring.mail.host" defaultValue="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%t] %X{__traceId} %-40.40logger{39} : %m%n" description="日志"/>
         <property name="spring.mail.username" defaultValue="debug" description="日志"/>
         <property name="spring.mail.password" defaultValue="/home/app/logs/sql.log" description="日志文件"/>
-        <property name="spring.mail.default-encoding" defaultValue="30" description="日志保留日期"/>
         <property name="mail.fromMail.addr" defaultValue="30" description="日志保留日期"/>
 
 
