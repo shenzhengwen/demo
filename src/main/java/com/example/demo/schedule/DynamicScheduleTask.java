@@ -1,10 +1,9 @@
 package com.example.demo.schedule;
 
-import com.example.demo.entity.Cron;
+import com.example.demo.entity.CronDO;
 import com.example.demo.service.CronServiceImpl;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
@@ -31,7 +30,7 @@ public class DynamicScheduleTask implements SchedulingConfigurer {
                 //2.设置执行周期(Trigger)
                 triggerContext -> {
                     //2.1 从数据库获取执行周期
-                    Cron cron = cronServiceImpl.getCronInfo("1");
+                    CronDO cron = cronServiceImpl.getCronInfo("1");
                     //2.2 合法性校验.
                     if (StringUtils.isEmpty(cron.getCron())) {
                         ///

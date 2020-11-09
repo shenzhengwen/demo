@@ -13,7 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName(value = "admin")
-public class Admin implements Serializable{
+public class AdminDO implements Serializable{
 
     @TableId(value = "aid")
     private int aid;
@@ -31,20 +31,20 @@ public class Admin implements Serializable{
     private String email;
 
     @TableField("admin_realName")
-    private String admin_realName;
+    private String adminRealName;
 
     @TableField("admin_gender")
-    private String admin_gender;
+    private String adminGender;
 
     @TableField("admin_birthday")
-    private String admin_birthday;
+    private String adminBirthday;
 
     @TableField("admin_address")
-    private String admin_address;
+    private String adminAddress;
 
     @TableField("admin_mobile")
-    private String admin_mobile;
+    private String adminMobile;
 
     @TableField("admin_pic")
-    private String admin_pic;
+    private String adminPic;
 }

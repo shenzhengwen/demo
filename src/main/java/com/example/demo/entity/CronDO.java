@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-@TableName
+@TableName(value = "cron")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cron implements Serializable {
+public class CronDO implements Serializable {
 
     @TableId(value = "cron_id")
     private String cronId;
