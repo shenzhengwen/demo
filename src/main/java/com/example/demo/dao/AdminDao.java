@@ -32,8 +32,8 @@ public class AdminDao extends ServiceImpl<AdminMapper,AdminDO> implements AdminI
     }
 
     public List<AdminDO> findAllAdminInfo(){
-        QueryWrapper<AdminDO> queryWrapper=new QueryWrapper<>();
-        return this.adminMapper.selectList(queryWrapper);
+//        QueryWrapper<AdminDO> queryWrapper=new QueryWrapper<>();
+        return this.adminMapper.selectList(null);
     }
     public int updateAdminInfo(String aid){
         try {

@@ -4,7 +4,7 @@
         <!--服务相关配置-->
         <property name="spring.application.name" defaultValue="demo" description="demo"/>
         <property name="server.servlet.context-path" defaultValue="/demo" description="demo"/>
-        <property name="server.port" defaultValue="8080" description="web项目端口号"/>
+        <property name="server.port" defaultValue="8081" description="web项目端口号"/>
 
         <!--eureka-->
         <property name="eureka.client.register-with-eureka" defaultValue="false" description=""/>

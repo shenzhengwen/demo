@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @MapperScan("com.example.demo.mapper.**")
-@EnableTransactionManagement(proxyTargetClass = true)
+//@EnableTransactionManagement(proxyTargetClass = true)
 @EnableScheduling
 @EnableDiscoveryClient
 @EnableFeignClients
